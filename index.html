@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="css/setmenu.css">
+    <link rel="stylesheet" href="css/main.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/rb/cellscolor_rb.js"></script>
+    <script src="script/rb/front_rb.js"></script>
+    <script src="script/rb/momentum.js"></script>
+    <script src="script/rb/send_set.js"></script>
+    <!-- <script src="script/rb/admin.js"></script> -->
+</head>
+
+<body>
+    <!-- <script type="text/javascript">
+			/*--------------------      Функция обработки перезагрузки страниц      -------------------------------*/
+			
+			function unloadPage() {
+            let r = localStorage.getItem('t');
+            r++;
+            localStorage.setItem('t', r);
+			
+			}
+			// From MDN
+			window.onunload = unloadPage;
+			
+			/*--------------------      / Функция обработки перезагрузки страницы      -------------------------------*/
+			
+		</script> -->
+    <!-- /*-------------------- Таблица результатов -------------------------------*/ -->
+    <!--  font-size: 14px;  class="table table-bordered table-sm"-->
+    <div class="container">
+        <div class="tableTitle">
+            <p>Loss tracker</p>
+        </div>
+        <!-- <div class="table-responsiv"> -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><span class="redBoldSpan">Red</span> <span class="blueBoldSpan">/</span> <span
+                            class="blueBoldSpan">Blue</span></th>
+                    <th><span class="violetBoldSpan">Ravno</span></th>
+                    <th><span class="redBoldSpan"> %2 Red</span></th>
+                    <th><span class="blueBoldSpan"> %2 Blue</span></th>
+                    <th><span class="violetBoldSpan"> %2 Sum</span></th>
+                    <th><span class="redBoldSpan">Red >< 3.5</span>
+                    </th>
+                    <th><span class="blueBoldSpan">Blue >< 3.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 4.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 5.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 6.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 7.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 8.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 9.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Time</span>
+                    </th>
+                    </td>
+                </tr>
+            </thead>
+            <tbody id='rb'></tbody>
+        </table>
+        <!-- </div> -->
+    </div>
+
+    <!-- /*-------------------- / Таблица результатов -------------------------------*/ -->
+    <!-- /*-------------------- Таблица результатов -------------------------------*/ -->
+    <!-- font-size: 14px;  class="table table-bordered table-sm"  class="head"   -->
+    <div class="container">
+        <div class="tableTitle">
+            <p>Win tracker</p>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><span class="redBoldSpan">Red</span> <span class="blueBoldSpan">/</span> <span
+                            class="blueBoldSpan">Blue</span></th>
+                    <th><span class="violetBoldSpan">Ravno</span></th>
+                    <th><span class="redBoldSpan"> %2 Red</span></th>
+                    <th><span class="blueBoldSpan"> %2 Blue </span></th>
+                    <th><span class="violetBoldSpan"> %2 Sum</span></th>
+                    <th><span class="redBoldSpan">Red >< 3.5</span>
+                    </th>
+                    <th><span class="blueBoldSpan">Blue >< 3.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 4.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 5.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 6.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 7.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 8.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 9.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Time</span> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td id='rbr_shah'></td>
+                    <td id='rav_shah'></td>
+                    <td id='r_cn_shah'></td>
+                    <td id='b_cn_shah'></td>
+                    <td id='s_cn_shah'></td>
+                    <td id='ml35_red_shah'></td>
+                    <td id='ml35_blue_shah'></td>
+                    <td id='ml45_summ_shah'></td>
+                    <td id='ml55_summ_shah'></td>
+                    <td id='ml65_summ_shah'></td>
+                    <td id='ml75_summ_shah'></td>
+                    <td id='ml85_summ_shah'></td>
+                    <td id='ml95_summ_shah'></td>
+                    <td id='Td_Time_shah'></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- /*-------------------- / Таблица результатов -------------------------------*/ -->
+    <!-- /*-------------------- Таблица результатов -------------------------------*/ -->
+    <!--  font-size: 14px;  class="table table-bordered table-sm"-->
+    <div class="container">
+        <div class="tableTitle">
+            <p>Nums. Loss tracker</p>
+        </div>
+        <div class="table-responsiv">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th><span class="redBoldSpan">Red 1</span> </th>
+                        <th><span class="redBoldSpan">Red 2</span> </th>
+                        <th><span class="redBoldSpan">Red 3</span> </th>
+                        <th><span class="redBoldSpan">Red 4</span> </th>
+                        <th><span class="redBoldSpan">Red 5</span> </th>
+                        <th><span class="redBoldSpan">Red 6</span> </th>
+                        <th><span class="blueBoldSpan">Blue 1</span> </th>
+                        <th><span class="blueBoldSpan">Blue 2</span> </th>
+                        <th><span class="blueBoldSpan">Blue 3</span> </th>
+                        <th><span class="blueBoldSpan">Blue 4</span> </th>
+                        <th><span class="blueBoldSpan">Blue 5</span> </th>
+                        <th><span class="blueBoldSpan">Blue 6</span> </th>
+                        <th><span class="violetBoldSpan">Time</span> </th>
+                    </tr>
+                </thead>
+                <tbody id='nums'>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- /*-------------------- / Таблица результатов -------------------------------*/ -->
+
+    <!-- /*-------------------- Таблица результатов -------------------------------*/ -->
+    <!-- font-size: 14px;  class="table table-bordered table-sm"  class="head"   -->
+    <!-- <div class="container">
+        <div style="text-align: center; width: 1300px;font-family: Lato;  font-size: 20px;">
+            <p>Win tracker</p>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><span class="redBoldSpan">Red</span> <span class="blueBoldSpan">/</span> <span
+                            class="blueBoldSpan">Blue</span></th>
+                    <th><span class="violetBoldSpan">Ravno</span></th>
+                    <th><span class="redBoldSpan"> %2 Red</span></th>
+                    <th><span class="blueBoldSpan"> %2 Blue </span></th>
+                    <th><span class="violetBoldSpan"> %2 Sum</span></th>
+                    <th><span class="redBoldSpan">Red >< 3.5</span>
+                    </th>
+                    <th><span class="blueBoldSpan">Blue >< 3.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 4.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 5.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 6.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 7.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 8.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Sum >< 9.5</span>
+                    </th>
+                    <th><span class="violetBoldSpan">Time</span> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td id='rbr_shah'></td>
+                    <td id='rav_shah'></td>
+                    <td id='r_cn_shah'></td>
+                    <td id='b_cn_shah'></td>
+                    <td id='s_cn_shah'></td>
+                    <td id='ml35_red_shah'></td>
+                    <td id='ml35_blue_shah'></td>
+                    <td id='ml45_summ_shah'></td>
+                    <td id='ml55_summ_shah'></td>
+                    <td id='ml65_summ_shah'></td>
+                    <td id='ml75_summ_shah'></td>
+                    <td id='ml85_summ_shah'></td>
+                    <td id='ml95_summ_shah'></td>
+                    <td id='Td_Time_shah'></td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <!-- /*-------------------- / Таблица результатов -------------------------------*/ -->
+    <button name=" toggle" type="button" id="start" class="setButton">Start</button><br /><br /><br /><br />
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- /*--------------------      Меню настроек     -------------------------------*/ -->
+    <!-- <br /><br /><br /><br /> -->
+    <!-- <div style="display: block; width: 100px; height: 100%;"></div> -->
+    <nav class="mobile-menu">
+        <input type="checkbox" id="checkbox" class="mobile-menu__checkbox">
+        <label for="checkbox" class="mobile-menu__btn">
+            <div class="mobile-menu__icon"></div>
+        </label>
+        <div class="mobile-menu__container">
+
+            <form action="">
+                <br /><br />
+                <div class="line">
+                    <!-- Красное синее -->
+                    <div id="rb_wrap">
+                        <div style="text-align: center;">
+                            <p>Loss tracker</p>
+                        </div>
+                        <label for="rb_loss">Red / Blue:</label>
+                        <input style="margin-top: 3px;" id="input_rb_loss" type="text" name="rb_loss" value size="5"
+                            disabled /><br /><br />
+
+                        <label for="ravno_loss">Ravno:</label>
+                        <input style="margin-top: 3px;" id="input_ravno_loss" type="text" name="ravno_loss" value
+                            size="5" disabled /><br /><br />
+
+                        <label for="cn_red_loss">%2 Red:</label>
+                        <input style="margin-top: 3px;" id="input_cn_red_loss" type="text" name="cn_red_loss" value
+                            size="5" disabled /><br /><br />
+
+                        <label for="cn_blue_loss">%2 Blue:</label>
+                        <input style="margin-top: 3px;" id="input_cn_blue_loss" type="text" name="cn_blue_loss" value
+                            size="5" disabled /><br /><br />
+
+                        <label for="cn_summ_loss">%2 Sum:</label>
+                        <input style="margin-top: 3px;" id="input_cn_summ_loss" type="text" name="cn_summ_loss" value
+                            size="5" disabled /><br /><br />
+
+                        <label for="ml_35_red_loss">Red ❯ ❮ 3.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml_35_red_loss" type="text" name="ml_35_red_loss"
+                            value size="5" disabled /><br /><br />
+
+                        <label for="ml_35_blue_loss">Blue ❯ ❮ 3.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml_35_blue_loss" type="text" name="ml_35_blue_loss"
+                            value size="5" disabled /><br /><br />
+
+                        <label for="more_45_summ_loss"> Sum ❯ 4.5:</label>
+                        <input style="margin-top: 3px;" id="input_more_45_summ_loss" type="text"
+                            name="more_45_summ_loss" value size="5" disabled /><br /><br />
+
+                        <label for="less_45_summ_loss"> Sum ❮ 4.5:</label>
+                        <input style="margin-top: 3px;" id="input_less_45_summ_losss" type="text"
+                            name="less_45_summ_loss" value size="5" disabled /><br /><br />
+
+                        <label for="more_55_summ_loss"> Sum ❯ 5.5:</label>
+                        <input style="margin-top: 3px;" id="input_more_55_summ_loss" type="text"
+                            name="more_55_summ_loss" value size="5" disabled /><br /><br />
+
+                        <label for="less_55_summ_loss"> Sum ❮ 5.5:</label> <!-- ❯  ❮-->
+                        <input style="margin-top: 3px;" id="input_less_55_summ_losss" type="text"
+                            name="less_55_summ_loss" value size="5" disabled /><br /><br />
+
+                        <label for="more_65_summ_loss"> Sum ❯ 6.5:</label>
+                        <input style="margin-top: 3px;" id="input_more_65_summ_loss" type="text"
+                            name="more_65_summ_loss" value size="5" disabled /><br /><br />
+
+                        <label for="less_65_summ_loss"> Sum ❮ 6.5:</label>
+                        <input style="margin-top: 3px;" id="input_less_65_summ_losss" type="text"
+                            name="less_65_summ_loss" value size="5" disabled /><br /><br />
+
+                        <label for="more_75_summ_loss"> Sum ❯ 7.5:</label>
+                        <input style="margin-top: 3px;" id="input_more_75_summ_loss" type="text"
+                            name="more_75_summ_loss" value size="5" disabled /><br /><br />
+
+                        <label for="less_75_summ_loss"> Sum ❮ 7.5:</label>
+                        <input style="margin-top: 3px;" id="input_less_75_summ_losss" type="text"
+                            name="less_75_summ_loss" value size="5" disabled /><br /><br />
+
+                        <label for="more_85_summ_loss"> Sum ❯ 8.5:</label>
+                        <input style="margin-top: 3px;" id="input_more_85_summ_loss" type="text"
+                            name="more_85_summ_loss" value size="5" disabled /><br /><br />
+
+                        <label for="less_85_summ_loss"> Sum ❮ 8.5:</label>
+                        <input style="margin-top: 3px;" id="input_less_85_summ_losss" type="text"
+                            name="less_85_summ_loss" value size="5" disabled /><br /><br />
+
+                        <label for="more_95_summ_loss"> Sum ❯ 9.5:</label>
+                        <input style="margin-top: 3px;" id="input_more_95_summ_loss" type="text"
+                            name="more_95_summ_loss" value size="5" disabled /><br /><br />
+
+                        <label for="less_95_summ_loss"> Sum ❮ 9.5:</label>
+                        <input style="margin-top: 3px;" id="input_less_95_summ_losss" type="text"
+                            name="less_95_summ_loss" value size="5" disabled /><br /><br />
+                    </div>
+                    <!-- Числа -->
+                    <div id="nums_wrap">
+                        <div style="text-align: center;">
+                            <p>Nums. Loss tracker</p>
+                        </div>
+                        <label for="r1_loss">Red 1:</label>
+                        <input style="margin-top: 3px;" id="input_r1_loss" type="text" name="r1_loss" value size="5"
+                            disabled /><br /><br />
+
+                        <label for="r2_loss">Red 2:</label>
+                        <input style="margin-top: 3px;" id="input_r2_loss" type="text" name="r2_loss" value size="5"
+                            disabled /><br /><br />
+
+                        <label for="r3_loss">Red 3:</label>
+                        <input style="margin-top: 3px;" id="input_r3_loss" type="text" name="r3_loss" value size="5"
+                            disabled /><br /><br />
+
+                        <label for="r4_loss">Red 4:</label>
+                        <input style="margin-top: 3px;" id="input_r4_loss" type="text" name="r4_loss" value size="5"
+                            disabled /><br /><br />
+
+                        <label for="r5_loss">Red 5:</label>
+                        <input style="margin-top: 3px;" id="input_r5_loss" type="text" name="r5_loss" value size="5"
+                            disabled /><br /><br />
+
+                        <label for="r6_loss">Red 6:</label>
+                        <input style="margin-top: 3px;" id="input_r6_loss" type="text" name="r6_loss" value size="5"
+                            disabled /><br /><br />
+
+                        <label for="b1_loss">Blue 1:</label>
+                        <input style="margin-top: 3px;" id="input_b1_loss" type="text" name="b1_loss" value size="5"
+                            disabled /><br /><br />
+
+                        <label for="b2_loss">Blue 2:</label>
+                        <input style="margin-top: 3px;" id="input_b2_loss" type="text" name="b2_loss" value size="5"
+                            disabled /><br /><br />
+
+                        <label for="b3_loss">Blue 3:</label>
+                        <input style="margin-top: 3px;" id="input_b3_loss" type="text" name="b3_loss" value size="5"
+                            disabled /><br /><br />
+
+                        <label for="b4_loss">Blue 4:</label>
+                        <input style="margin-top: 3px;" id="input_b4_loss" type="text" name="b4_loss" value size="5"
+                            disabled /><br /><br />
+
+                        <label for="b5_loss">Blue 5:</label>
+                        <input style="margin-top: 3px;" id="input_b5_loss" type="text" name="b5_loss" value size="5"
+                            disabled /><br /><br />
+
+                        <label for="b6_loss">Blue 6:</label>
+                        <input style="margin-top: 3px;" id="input_b6_loss" type="text" name="b6_loss" value size="5"
+                            disabled /><br /><br />
+                    </div>
+                    <!-- Шахматка -->
+                    <div id="shah_wrap">
+                        <div style="text-align: center;">
+                            <p>Win tracker</p>
+                        </div>
+                        <!-- <label for="r_shah_Win">Красyfz. Кличество выигрышей:</label>
+                        <input id="input_r_shah_Win" type="text" name="r_shah_Win" value size="5"
+                            disabled /><br /><br /> -->
+
+                        <!-- <label for="b_shah_Win">Синяя. Кличество выигрышей:</label>
+                        <input id="input_b_shah_Win" type="text" name="b_shah_Win" value size="5"
+                            disabled /><br /><br /> -->
+                        <label for="rb_shah_Win">Red / Blue:</label>
+                        <input style="margin-top: 3px;" id="input_rb_shah_Win" type="text" name="rb_shah_Win" value
+                            size="5" disabled /><br /><br />
+                        <label for="rav_shah_Loss">Ravno:</label>
+                        <input style="margin-top: 3px;" id="input_rav_shah_Loss" type="text" name="rav_shah_Loss" value
+                            size="5" disabled /><br /><br />
+
+                        <label for="cn_r_shah_Win">%2 Red:</label>
+                        <input style="margin-top: 3px;" id="input_cn_r_shah_Win" type="text" name="cn_r_shah_Win" value
+                            size="5" disabled /><br /><br />
+
+                        <label for="cn_b_shah_Win">%2 Blue:</label>
+                        <input style="margin-top: 3px;" id="input_cn_b_shah_Win" type="text" name="cn_b_shah_Win" value
+                            size="5" disabled /><br /><br />
+
+                        <label for="cn_summ_shah_Win">%2 Sum:</label>
+                        <input style="margin-top: 3px;" id="input_cn_summ_shah_Win" type="text" name="cn_summ_shah_Win"
+                            value size="5" disabled /><br /><br />
+
+                        <label for="ml35_shah_redWin">Red ❯ ❮ 3.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml35_shah_redWin" type="text" name="ml35_shah_redWin"
+                            value size="5" disabled /><br /><br />
+
+                        <label for="ml35_shah_blueWin">Blue ❯ ❮ 3.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml35_shah_blueWin" type="text"
+                            name="ml35_shah_blueWin" value size="5" disabled /><br /><br />
+
+                        <label for="ml45_summ_shah_more_Win"> Sum ❯ 4.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml45_summ_shah_more_Win" type="text"
+                            name="ml45_summ_shah_more_Win" value size="5" disabled /><br /><br />
+
+                        <label for="ml45_summ_shah_less_Win"> Sum ❮ 4.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml45_summ_shah_less_Win" type="text"
+                            name="ml45_summ_shah_less_Win" value size="5" disabled /><br /><br />
+
+                        <label for="ml55_summ_shah_more_Win"> Sum ❯ 5.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml55_summ_shah_more_Win" type="text"
+                            name="ml55_summ_shah_more_Win" value size="5" disabled /><br /><br />
+
+                        <label for="ml55_summ_shah_less_Win"> Sum ❮ 5.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml55_summ_shah_less_Win" type="text"
+                            name="ml55_summ_shah_less_Win" value size="5" disabled /><br /><br />
+
+                        <label for="ml65_summ_shah_more_Win">Sum ❯ 6.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml65_summ_shah_more_Win" type="text"
+                            name="ml65_summ_shah_more_Win" value size="5" disabled /><br /><br />
+
+                        <label for="ml65_summ_shah_less_Win">Sum ❮ 6.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml65_summ_shah_less_Win" type="text"
+                            name="ml65_summ_shah_less_Win" value size="5" disabled /><br /><br />
+
+                        <label for="ml75_summ_shah_more_Win">Sum ❯ 7.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml75_summ_shah_more_Win" type="text"
+                            name="ml75_summ_shah_more_Win" value size="5" disabled /><br /><br />
+
+                        <label for="ml75_summ_shah_less_Win">Sum ❮ 7.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml75_summ_shah_less_Win" type="text"
+                            name="ml75_summ_shah_less_Win" value size="5" disabled /><br /><br />
+
+                        <label for="ml85_summ_shah_more_Win">Sum ❯ 8.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml85_summ_shah_more_Win" type="text"
+                            name="ml85_summ_shah_more_Win" value size="5" disabled /><br /><br />
+
+                        <label for="ml85_summ_shah_less_Win">Sum ❮ 8.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml85_summ_shah_mless_Win" type="text"
+                            name="ml85_summ_shah_mless_Win" value size="5" disabled /><br /><br />
+
+                        <label for="ml95_summ_shah_more_Win">Sum ❯ 9.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml95_summ_shah_more_Win" type="text"
+                            name="ml95_summ_shah_more_Win" value size="5" disabled /><br /><br />
+
+                        <label for="ml95_summ_shah_less_Win">Sum ❮ 9.5:</label>
+                        <input style="margin-top: 3px;" id="input_ml95_summ_shah_less_Win" type="text"
+                            name="ml95_summ_shah_less_Win" value size="5" disabled /><br /><br />
+
+                    </div>
+                </div><br />
+                <div id="nik_wrap">
+                    <label for="nikName">NikName:</label>
+                    <input id="input_nikName" type="text" name="nikName" value size="15" disabled />
+                </div><br /><br />
+                <button name="toggle" type="button" id="send" class="setButton">Redact</button><br /><br /><br /><br />
+                <!-- </div> -->
+
+            </form>
+
+        </div>
+    </nav>
+    <!-- <script src="script/rb/cellscolor_rb.js"></script> -->
+    <!-- <script src="script/rb/front_rb.js"></script> -->
+    <!-- <script src="script/rb/send_set.js"></script> -->
+    <!--  /*--------------------      /  Меню настроек     -------------------------------*/ -->
+
+</body>
+
+</html>
