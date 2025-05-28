@@ -1,1 +1,65 @@
+.StartTable{
+    position: relative;
+    width: 500px;
+    border-collapse: collapse;
+    border-color: #93a1a1;
+    border-spacing: 0;
+    font-family: Lato;
 
+}
+.StarttableTitle {
+    background-color: #f2f4f8;
+    text-align: center;
+    width: 500px;
+    font-family: Lato;
+    font-size: 20px;
+}
+.StarttableTitle p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: darkblue;
+}
+
+/* колонки */
+
+.StartTable td {
+    /* background-color: #fcfdfa; */
+    border-style: solid;
+    border-color: #93a1a1;
+    border-width: 1px;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 3px 3px;
+    word-break: normal;
+    line-height: 135%;
+    text-align: center;
+}
+
+/* шапка */
+.StartTable th {
+    background-color: #ecf1f8;
+    border-style: solid;
+    border-color: #93a1a1;
+    border-width: 1px;
+    line-height: 150%;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 5px 5px;
+    word-break: normal;
+    text-align: center;
+    width: auto;
+}
+.startButton {
+    background-color: #ddfcdd;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: #93a1a1;
+    border-width: 1px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: bold;
+    color: #413e3e;
+    /* margin-left: 90px; */
+}

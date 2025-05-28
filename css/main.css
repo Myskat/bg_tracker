@@ -1,0 +1,343 @@
+/* обёртка таблицы */
+
+.container {
+    padding: 0 10px;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    margin-left: 80px;
+}
+
+/* таблица */
+
+.table {
+    position: relative;
+    width: 1300px;
+    border-collapse: collapse;
+    border-color: #93a1a1;
+    border-spacing: 0;
+    font-family: Lato;
+}
+
+.tableTitle {
+    background-color: #f2f4f8;
+    text-align: center;
+    width: 1300px;
+    font-family: Lato;
+    font-size: 20px;
+}
+
+.tableTitle p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: darkblue;
+}
+
+/* колонки */
+
+.table td {
+    /* background-color: #fcfdfa; */
+    border-style: solid;
+    border-color: #93a1a1;
+    border-width: 1px;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 3px 3px;
+    word-break: normal;
+    line-height: 135%;
+}
+
+/* шапка */
+
+.table th {
+    background-color: #ecf1f8;
+    border-style: solid;
+    border-color: #93a1a1;
+    border-width: 1px;
+    line-height: 150%;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 5px 5px;
+    word-break: normal;
+    text-align: center;
+    width: auto;
+}
+
+/* Стили по шахматке */
+
+.wrap_Shah_r_left {
+    text-align: center;
+    color: #ED7D80;
+    font-weight: bold;
+    /* width: 50%; */
+    width: 48%;
+    /* background-color: #ED7D80; */
+    /* background-color: #FEF8F8; */
+    border-width: 1px;
+    /* border-color: #FFFEEA; */
+    border-color: #ED7D80;
+    border-style: solid;
+    height: 20px;
+    margin-top: 1px;
+}
+
+.wrap_Shah_r_right {
+    text-align: center;
+    /* color: #FFFEEA; */
+    color: #ED7D80;
+    font-weight: bold;
+    /* width: 50%; */
+    width: 48%;
+    margin: 0 0 0 50%;
+    /* background-color: #ED7D80; */
+    /* background-color: #FEF8F8; */
+    /* border-width: 1px; */
+    border-width: 1px;
+    /* border-color: #FFFEEA; */
+    border-color: #ED7D80;
+    border-style: solid;
+    height: 20px;
+    margin-top: 1px;
+    /* margin: 1px 1px 1px 1px; */
+}
+
+.wrap_Shah_b_right {
+    text-align: center;
+    /* color: #FFFEEA; */
+    color: #5462BD;
+    font-weight: bold;
+    /* width: 50%; */
+    width: 48%;
+    margin: 0 0 0 50%;
+    /* background-color: #5462BD; */
+    /* background-color: #F1F6FD; */
+    border-width: 1px;
+    /* border-color: #FFFEEA; */
+    /* border-color: #5462BD; */
+    border-style: solid;
+    height: 20px;
+    margin-top: 1px;
+    /* margin-left: 1px; */
+    /* margin: 1px 1px 1px 1px; */
+    /* vertical-align: middle; */
+}
+
+.wrap_Shah_b_left {
+    text-align: center;
+    /* color: #FFFEEA; */
+    color: #5462BD;
+    font-weight: bold;
+    /* width: 50%; */
+    width: 48%;
+    /* background-color: #5462BD; */
+    /* background-color: #F1F6FD; */
+    border-width: 1px;
+    /* border-color: #FFFEEA; */
+    /* border-color: #5462BD; */
+    border-style: solid;
+    height: 20px;
+    margin-top: 1px;
+    /* margin: 1px 1px 1px 1px; */
+    /* top: 50%; */
+    /* padding-top: 50%; */
+    /* display: flex;
+    align-items: center */
+    /* vertical-align: middle; */
+}
+
+.wrap_Shah_rav {
+    text-align: center;
+    /* color: #FFFEEA; */
+    color: #A767BC;
+    font-weight: bold;
+    width: 100%;
+    /* background-color: #A767BC; */
+    background-color: #F4ECF6;
+    border-width: 1px;
+    /* border-color: #FFFEEA; */
+    border-color: #A767BC;
+    border-style: solid;
+    height: 20px;
+    margin-top: 1px;
+}
+
+.wrap_Shah_rav_right {
+    text-align: center;
+    /* color: #FFFEEA; */
+    color: #A767BC;
+    font-weight: bold;
+    width: 48%;
+    margin: 0 0 0 50%;
+    /* background-color: #A767BC; */
+    /* background-color: #F4ECF6; */
+    border-width: 1px;
+    /* border-color: #FFFEEA; */
+    border-color: #A767BC;
+    border-style: solid;
+    height: 20px;
+    margin-top: 1px;
+    /* margin-right: 1px; */
+    /* margin-left: 1px; */
+}
+
+.wrap_Shah_rav_left {
+    text-align: center;
+    /* color: #FFFEEA; */
+    color: #A767BC;
+    font-weight: bold;
+    width: 48%;
+    /* background-color: #A767BC; */
+    /* background-color: #F4ECF6; */
+    border-width: 1px;
+    /* border-color: #FFFEEA; */
+    border-color: #A767BC;
+    border-style: solid;
+    height: 20px;
+    margin-top: 1px;
+    /* margin-right: 1px; */
+    /* margin-left: 1px; */
+}
+
+/* раскрасска шихматки при экстремумах*/
+
+/* .wrap_Shah_greenSignal_r_left {
+    background-color: #E9FFE7;
+}
+.wrap_Shah_yellowSignal_r_left {
+    background-color: #FFFEEA;
+}
+.wrap_Shah_pinkSignal_r_left{
+    background-color: #FFF1F1;
+} */
+
+.wrap_Shah_greenSignal {
+    background-color: #E9FFE7;
+}
+
+.wrap_Shah_yellowSignal {
+    background-color: #FFFEEA;
+}
+
+.wrap_Shah_pinkSignal {
+    background-color: #FFE7E7;
+}
+
+/* раскраска экстремумов fcfdfa */
+
+.table .td-nonSignal {
+    background-color: #fff;
+}
+
+.table .td-pinkSignal {
+    background-color: #FFF1F1;
+}
+
+.table .td-yellowSignal {
+    background-color: #FFFEEA;
+}
+
+.table .td-greenSignal {
+    background-color: #E9FFE7;
+}
+
+.table .td-blueSignal {
+    background-color: #e4f7ff;
+}
+
+.table .td-purpleSignal {
+    background-color: #efecff;
+}
+
+.table .td-violetSignal {
+    background-color: #ece1f9;
+}
+
+.time_row {
+    margin: 3px;
+    text-align: center;
+    border-style: solid;
+    border-color: #93a1a1;
+    border-width: 1px;
+    background-color: #fbfdff;
+    /* line-height: 135%; */
+}
+
+#Td_Time_shah .wrap_Shah {
+    margin: 2px;
+    text-align: center;
+    /* border-bottom: solid; */
+    border-style: solid;
+    border-color: #93a1a1;
+    border-width: 1px;
+    background-color: #fbfdff;
+    line-height: 136%;
+}
+
+/* Стили кнопки Запуск/Остановка скриптов */
+
+/* .battonRed{
+    background-color: #ffd4d5;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: #93a1a1;
+    border-width: 1px;
+    font-family: Lato;
+    font-weight: bold;
+    color: #ffffff;
+} */
+
+.setButton {
+    background-color: #ddfcdd;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    border-style: solid;
+    border-color: #93a1a1;
+    border-width: 1px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: bold;
+    color: #413e3e;
+    margin-left: 90px;
+}
+
+/* раскраска ключевых значений */
+
+.redSpan {
+    color: #ED7D80;
+}
+
+.redBoldSpan {
+    font-weight: bold;
+    color: #ED7D80;
+}
+
+.blueSpan {
+    color: #5462BD;
+}
+
+.blueBoldSpan {
+    font-weight: bold;
+    color: #5462BD;
+}
+
+.violetSpan {
+    color: #A767BC;
+}
+
+.violetBoldSpan {
+    font-weight: bold;
+    color: #A767BC;
+    /* font-size: 16px; */
+}
+
+.boldSpan {
+    font-weight: bold;
+}
+
+.smallFontSpan {
+    font-size: 11px;
+}
