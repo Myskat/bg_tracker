@@ -1,0 +1,3 @@
+<?php
+ $ishod = '[{"red":2,"blue":2,"time":"1705427576"},{"red":6,"blue":1,"time":"1705427610"},{"red":3,"blue":1,"time":"1705427644"},{"red":5,"blue":4,"time":"1705427679"},{"red":2,"blue":3,"time":"1705427714"},{"red":3,"blue":3,"time":"1705427749"},{"red":3,"blue":4,"time":"1705427784"},{"red":5,"blue":4,"time":"1705427819"},{"red":4,"blue":3,"time":"1705427851"},{"red":3,"blue":6,"time":"1705427883"}]';
+ $ishodObj = json_decode($ishod);
